@@ -20,7 +20,7 @@ const randomIntegerFromInterval = (min, max) => {
 let intervalColorId;
 const randomBgColorBody = () => {
   intervalColorId = setInterval(() => {
-    const indexColor = colors[randomIntegerFromInterval(0, 5)];
+    const indexColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
     bodyEl.style.backgroundColor = `${indexColor}`;
   }, 1000);
   btnDisabledOffOn(true);
